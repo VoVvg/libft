@@ -6,15 +6,15 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:28:34 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/05 20:21:30 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/06 18:06:42 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_lower(int c)
+int		ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
-	return (0);
+	return (c);
 }

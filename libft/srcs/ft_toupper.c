@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:24:11 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/05 20:25:48 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/06 18:05:17 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 int		ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-	{
-		c -= 32;
-		return (c);
-	}
-	return (0);
+		return (c - 32);
+	return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 17:25:51 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/05 20:18:46 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/07 18:47:18 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	unsigned int i;
 	unsigned int pos;
 
-	pos = 0;
-	if (!needle)
+	if (!ft_strlen(needle))
 		return ((char *)haystack);
+	pos = 0;
 	while (haystack[pos] != '\0')
 	{
 		if (haystack[pos] == needle[0])
