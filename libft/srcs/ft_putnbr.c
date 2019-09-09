@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 09:44:58 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 09:48:13 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/09 16:26:16 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/09 16:27:01 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include <stdlib.h>
 
-char	*ft_strnew(size_t size)
+void	ft_putnbr(int n)
 {
-	size_t	i;
-	char 	*string;
-
-	if (!(string = ft_memalloc(size + 1)))
-		return (NULL);
-	i = 0;
-	while (i < size)
-		string[i++] = '\0';
-	return (string);
+	ft_putnbr_fd(n, 1);
 }

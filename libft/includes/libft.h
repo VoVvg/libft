@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:56:16 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 11:29:52 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/09 16:38:16 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strdup(const char *src);
@@ -55,8 +56,15 @@ int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2,size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
 
+void	ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
-
 
 #endif

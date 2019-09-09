@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 11:17:07 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 11:19:24 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/09 16:14:16 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/09 16:17:11 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void ft_putstr(char const *s)
 {
-	char res;
-
-	if (!s || !(res = ft_memalloc(len + 1)))
-		return (NULL);
-	res = ft_strncpy(res, (char *)s + start, len);
-	return (res);
+	ft_putstr_fd(s, 1);
 }
