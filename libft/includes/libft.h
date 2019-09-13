@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:56:16 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 16:38:16 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/13 20:55:49 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strdup(const char *src);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
@@ -57,6 +57,7 @@ int		ft_strnequ(char const *s1, char const *s2,size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+char	*ft_itoa(int n);
 
 void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);

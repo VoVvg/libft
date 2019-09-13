@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 18:22:46 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/07 18:41:19 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/11 15:35:16 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	i = -1;
 	ptr = (char *)src;
 	ptr2 = (char *)dst;
+	if (len == 0 || ((unsigned char *) dst == (unsigned char *) src))
+		return (dst);
 	if (ptr < ptr2)
 		while ((int)(--len) >= 0)
 			*(ptr2 + len) = *(ptr + len);
