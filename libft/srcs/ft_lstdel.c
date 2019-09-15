@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/15 20:23:17 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/15 20:23:49 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/15 20:20:34 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/15 20:25:56 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-
+	if (alst && *alst && del)
+	{
+		if ((*alst)->next)
+			ft_lstdel(&(*alst)->next, del);
+		ft_lstdelone(&(*alst), del);
+	}
 }

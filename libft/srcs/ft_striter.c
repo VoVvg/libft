@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 10:56:50 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 10:58:16 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/15 20:00:58 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,3 @@ void	ft_striter(char *s, void (*f)(char *))
 	while (*ptr)
 		f(ptr++);
 }
-

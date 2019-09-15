@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/15 20:23:17 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/15 20:23:49 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/15 20:16:17 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/15 20:28:11 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+/*t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 
 }
+*/

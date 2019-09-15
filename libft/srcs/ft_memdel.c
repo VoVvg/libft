@@ -6,12 +6,11 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 09:42:16 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 09:44:15 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/15 20:26:20 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

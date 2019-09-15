@@ -6,7 +6,7 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 21:22:31 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/11 15:33:34 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/15 19:57:28 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	ptr = dst;
 	ptr2 = (char *)src;
-	if (n == 0 || ((unsigned char *) dst == (unsigned char *) src))
+	if (n == 0 || ((unsigned char *)dst == (unsigned char *)src))
 		return (dst);
 	while (n--)
 		*(ptr++) = *(ptr2++);

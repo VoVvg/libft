@@ -6,13 +6,13 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 16:14:16 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 16:17:11 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/15 19:58:45 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	ft_putstr_fd(s, 1);
 }

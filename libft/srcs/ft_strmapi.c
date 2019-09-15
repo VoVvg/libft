@@ -6,13 +6,13 @@
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 11:05:45 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/09 11:07:32 by bstacksp         ###   ########.fr       */
+/*   Updated: 2019/09/15 20:03:04 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*res;
