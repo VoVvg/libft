@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 18:28:47 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/17 05:52:15 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/17 01:07:38 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/17 01:11:05 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_countwords(char const *str, char c)
 {
-	const unsigned char *ptr1;
-	const unsigned char *ptr2;
+	int count;
+	int i;
 
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
-	while (n--)
+	i = 0;
+	count = 0;
+	while (str[i])
 	{
-		if (*ptr1 != *ptr2)
-			return (*ptr1 - *ptr2);
-		else
-		{
-			ptr1++;
-			ptr2++;
-		}
+		while (str[i] == c)
+			i++;
+		if (str[i] != c && str[i] != '\0')
+			count++;
+		while (str[i] != c && str[i] != '\0')
+			i++;
 	}
-	return (0);
+	return (count);
 }

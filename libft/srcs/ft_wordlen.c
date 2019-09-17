@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_wordlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 18:28:47 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/17 05:52:15 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/17 01:11:57 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/17 01:14:17 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_wordlen(char const *str, char c)
 {
-	const unsigned char *ptr1;
-	const unsigned char *ptr2;
+	int i;
+	int len;
 
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
-	while (n--)
+	i = 0;
+	len = 0;
+	while (str[i] == c)
+		i++;
+	while (str[i] != c && str[i] != '\0')
 	{
-		if (*ptr1 != *ptr2)
-			return (*ptr1 - *ptr2);
-		else
-		{
-			ptr1++;
-			ptr2++;
-		}
+		i++;
+		len++;
 	}
-	return (0);
+	return (len);
 }

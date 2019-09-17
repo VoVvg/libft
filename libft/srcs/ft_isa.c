@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isa.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 18:28:47 by bstacksp          #+#    #+#             */
-/*   Updated: 2019/09/17 05:52:15 by bstacksp         ###   ########.fr       */
+/*   Created: 2019/09/17 01:43:49 by bstacksp          #+#    #+#             */
+/*   Updated: 2019/09/17 01:45:25 by bstacksp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_isa(char c)
 {
-	const unsigned char *ptr1;
-	const unsigned char *ptr2;
-
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
-	while (n--)
-	{
-		if (*ptr1 != *ptr2)
-			return (*ptr1 - *ptr2);
-		else
-		{
-			ptr1++;
-			ptr2++;
-		}
-	}
+	if (c == 'a')
+		return (1);
 	return (0);
 }
