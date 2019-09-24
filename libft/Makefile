@@ -6,12 +6,14 @@
 #    By: bstacksp <bstacksp@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 19:49:00 by bstacksp          #+#    #+#              #
-#    Updated: 2019/09/17 05:59:49 by bstacksp         ###   ########.fr        #
+#    Updated: 2019/09/18 16:33:26 by bstacksp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
-HEADERS =  /includes/libft.h
+
+HEADER =  /includes/libft.h
+
 SRCS	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_memchr.c ft_memcmp.c	ft_strlen.c ft_strdup.c ft_strcpy.c \
 		ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c \
@@ -25,7 +27,7 @@ SRCS	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstnew.c \
 		ft_lstmap.c ft_lstiter.c \
-		ft_numlen.c ft_wordlen.c ft_countwords.c ft_isa.c ft_strnlen.c 
+		ft_numlen.c ft_wordlen.c ft_countwords.c ft_swapnfree.c ft_strnlen.c 
 
 OBJ 	= ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 		ft_memchr.o ft_memcmp.o	ft_strlen.o ft_strdup.o ft_strcpy.o \
@@ -40,19 +42,24 @@ OBJ 	= ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 		ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o ft_lstnew.o \
 		ft_lstmap.o ft_lstiter.o \
-		ft_numlen.o ft_wordlen.o ft_countwords.o ft_isa.o ft_strnlen.o 
-SRC		= $(addprefix srcs/, $(SRCS))
+		ft_numlen.o ft_wordlen.o ft_countwords.o ft_swapnfree.o ft_strnlen.o 
+
+
 
 all: $(NAME)
-	gcc -Wall -Wextra -Werror -I $(HEADERS) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
+%.o: %.c $(HEADER)
+	gcc -I . -Wall -Werror -Wextra $< -c -o $@
 
 clean:
-	/bin/rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean re all
